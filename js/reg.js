@@ -9,11 +9,12 @@ for(let inp of input) {
         }
         inp.removeAttribute("autofocus");
         let div = inp.closest(".input");
+        let next = div.nextElementSibling;
         div.classList.toggle('hide');
-        div.nextElementSibling.classList.toggle('hide');
-        div.nextElementSibling.querySelector('input').focus();
+        next.classList.toggle('hide');
+        next.querySelector('input').focus();
       } else  
-        inp.nextElementSibling.innerHTML = '<b style="background:pink;color:black;">Введено Неверно!</b>';
+        inp.nextElementSibling.innerHTML = '<b style="background:pink;color:tomato;">Введено Неверно!</b>';
     });
   } else {
     inp.addEventListener("focus", () => {
