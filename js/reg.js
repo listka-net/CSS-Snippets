@@ -7,11 +7,11 @@ for(let inp of input) {
         if(inp.name !== 'pass2') {
           state[inp.name] = inp.value;
         }
-        inp.removeAttribute("autofocus");
         let div = inp.closest(".input");
         let next = div.nextElementSibling;
         div.classList.toggle('hide');
         next.classList.toggle('hide');
+        inp.removeAttribute("autofocus");
         next.querySelector('input').focus();
       } else  
         inp.nextElementSibling.innerHTML = '<b style="background:pink;color:tomato;">Введено Неверно!</b>';
