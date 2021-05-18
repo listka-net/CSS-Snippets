@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <title>Ajax technology</title>
+        <style>
+            body {color:khaki;background:darkorange}
+            input {text-align:center;color:khaki;background:darkgreen}
+            .abs {position:absolute;top:70px;}
+            .input {transform-origin: top center;transition:.4s;display:flex;flex-flow:column nowrap;padding:10px;background:brown}
+            b {font-variant:small-caps;font-weight:900;font-size:120%}
+            button {padding: 10px;margin:10px;color:khaki;background:darkgreen}
+            .hide {transform:scaleY(0);}
+        </style>
+    </head>
+    <body>
+        <h1>
+            Hello, World!
+        </h1>
+        <div class="abs input">
+            <input autofocus name="name" />
+            <label>Введите <b>имя</b> 4+ лат. или русск. букв</label>
+        </div>
+        <div class="abs input hide">
+            <input name="login" />
+            <label>Введите <b>login</b> 4+ лат. символов или цифр</label>
+        </div>
+        <div class="abs input hide">
+            <input name="email" />
+            <label>Введите валидный <b>email</b> адрес</label>
+        </div>
+        <div class="abs input hide">
+            <input name="pass" />
+            <label>Введите <b>пароль</b> 6+ символов</label>
+        </div>
+        <div class="abs input hide">
+            <input name="pass2" />
+            <label>Повторите ввод <b>пароля</b></label>
+        </div>
+        <div class="input hide">
+            <span id="output"></span>
+            <input type="submit" name="send" />
+            <button id="reset">отменить</button>
+        </div>
+  <script src="js/reg.js"></script>
+ </body>
+</html>
